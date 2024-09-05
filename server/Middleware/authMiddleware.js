@@ -14,7 +14,6 @@ export const authMiddleware = (req, res, next) => {
         const payload = jwt.verify(token, process.env.JWT_SECRET);
         req.currentUser = payload;
     } catch (error) {
-        console.log(error);
         res.status(401).send({ error: "Klientas neatpažintas" });
         return;
     }

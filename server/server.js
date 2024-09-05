@@ -3,12 +3,14 @@ import 'dotenv/config'
 import authRoutes from "./Routes/AuthRoutes.js";
 import { connectToDb } from "./Database.js";
 import userRoutes from "./Routes/UserRoutes.js";
+import cors from "cors"
 
 const server = express();
 
 const PORT = process.env.PORT ?? 5000;
 
 server.use(express.json());
+server.use(cors());
 server.use("/auth", authRoutes);
 server.use("/", userRoutes);
 

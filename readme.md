@@ -22,7 +22,7 @@
 
 - Start server:
   ```
-  npm run server
+  npm run start
   ```
 
 ## Instalation of client side
